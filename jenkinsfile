@@ -1,19 +1,19 @@
 pipeline{
     agent {
-        docker{
+        docker {
             image 'ruby'
         }
     }
     
     stages {
         stage('Build'){
-            steps{
+            steps {
                 echo 'Building or Resolve Dependences!'
                 sh 'bundle install' //sh comando shel do linux
             }
         }
         stage('Tes') {
-            steps{ 
+            steps { 
                 echo 'Running regression testes'
             }
         }
